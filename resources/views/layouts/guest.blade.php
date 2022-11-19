@@ -8,9 +8,9 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Scripts -->
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
-
     </head>
     <body>
         @if (!request()->routeIs('login') && !request()->routeIs('register')
@@ -19,12 +19,11 @@
             && !request()->routeIs('two-factor.login'))
             @include('website.partials.nav')
         @endif
-        <div class="font-sans text-gray-900 antialiased">
+        <main class="font-sans text-gray-900 antialiased">
             {{ $slot }}
-        </div>
+        </main>
+        @include('website.partials.footer')
 
-        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         @stack('modals')
         @livewireScripts
     </body>

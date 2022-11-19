@@ -10,5 +10,6 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 class="lg:text-xl xl:text-2xl font-bold text-black">{{ __("Latest stories") }}</h3>
         @livewire('web.article.index')
+        @livewire('web.subscriber.form')
     </main>
 </x-guest-layout>

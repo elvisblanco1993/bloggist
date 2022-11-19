@@ -34,7 +34,9 @@
                             </th>
                             <td class="py-4 px-6">
                                 @if ($article->categories->count() > 0)
-                                    <span class="px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100" title="@forelse ($article->categories as $cat){{ $cat->name }} @if(!$loop->last), @endif @empty @endforelse">{{ $article->categories()->first()->name }}...</span>
+                                    <span class="inline-block px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100"
+                                        title="@forelse ($article->categories as $cat){{ $cat->name }} @if(!$loop->last), @endif @empty @endforelse"
+                                    >{{ str($article->categories()->first()->name)->limit(10, '...') }}</span>
                                 @else
                                     <span class="px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100">-</span>
                                 @endif

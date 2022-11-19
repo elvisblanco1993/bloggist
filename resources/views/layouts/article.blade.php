@@ -8,6 +8,7 @@
         <title>{{ $title . ' | ' . config('app.name', 'Bloggist') }}</title>
 
         <!-- Scripts -->
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
@@ -18,9 +19,8 @@
         <main class="min-h-screen">
             {{ $slot }}
         </main>
+        @include('website.partials.footer')
 
-        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         @stack('modals')
         @livewireScripts
     </body>

@@ -26,5 +26,6 @@
             </article>
         @empty
         @endforelse
+        <div class="col-span-6">{{ $articles->links() }}</div>
     </section>
 </div>

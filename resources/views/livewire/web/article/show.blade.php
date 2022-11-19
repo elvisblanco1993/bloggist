@@ -15,6 +15,10 @@
             {!! Str::markdown($article->body) !!}
         </div>
 
+        <div class="mt-12">
+            @livewire('web.subscriber.form')
+        </div>
+
         @if ($article->comments)
             <div class="my-12">
                 @include('website.partials.disqus-comments')

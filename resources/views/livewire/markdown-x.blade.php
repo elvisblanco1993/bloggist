@@ -65,7 +65,7 @@
             <div class="relative z-30 overflow-hidden @if(isset($style['height'])){{ $style['height'] }}@endif">
 
                 <div wire:ignore x-ref="placeholder" @click="$refs.editor.focus()" id="placeholder-{{ $key }}" x-show="placeholder" class="absolute z-20 text-gray-400 transition-opacity duration-200 ease-out" x-cloak>Type '/' for commands </div>
-                <textarea x-ref="editor" id="editor-{{ $key }}" data-key="{{ $key }}" class="editors @if(isset($style['textarea'])){{ $style['textarea'] }}@else{{ 'w-full h-full mx-auto min-h-screen px-5 md:px-1 pt-5 font-mono leading-loose tracking-tighter border-0 outline-none focus:outline-none sm:x-0 text-lg text-gray-600' }}@endif" placeholder="" data-loaded="false" name="{{ $name }}" x-on:dragenter="$event.preventDefault(); dropFiles=true" wire:model.lazy="content" x-on:blur="@this.call('update', { content: $event.target.value });" x-on:focus="editorEvent($event)" x-on:keypress="editorEvent($event)" x-on:keydown="getCursorXY(); editorEvent($event)" x-on:keyup="getCursorXY(); editorEvent($event)" x-on:click="editorEvent($event)" x-cloak>
+                <textarea x-ref="editor" id="editor-{{ $key }}" data-key="{{ $key }}" class="editors @if(isset($style['textarea'])){{ $style['textarea'] }}@else{{ 'w-full h-full mx-auto min-h-[70vh] px-5 md:px-1 pt-5 font-mono leading-loose tracking-tighter border-0 outline-none focus:outline-none sm:x-0 text-gray-600' }}@endif" placeholder="" data-loaded="false" name="{{ $name }}" x-on:dragenter="$event.preventDefault(); dropFiles=true" wire:model.lazy="content" x-on:blur="@this.call('update', { content: $event.target.value });" x-on:focus="editorEvent($event)" x-on:keypress="editorEvent($event)" x-on:keydown="getCursorXY(); editorEvent($event)" x-on:keyup="getCursorXY(); editorEvent($event)" x-on:click="editorEvent($event)" x-cloak>
                     </textarea>
                 <div x-ref="drop" x-show="dropFiles" x-on:dragleave="$event.preventDefault(); dropFiles=false" x-on:dragover="$event.preventDefault();" x-on:drop="$event.preventDefault(); droppingFile($event)" class="absolute inset-0 flex items-center justify-center w-full h-full bg-blue-100 bg-opacity-20" x-cloak>
                     <div class="flex flex-col items-center justify-center w-40 h-32 text-xs text-gray-400 bg-white border-0 border-gray-200 border-dashed rounded-lg">
@@ -77,13 +77,13 @@
         </div>
 
         {{-- MarkdownX Preview Section --}}
-        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'h-full bg-white min-h-screen relative z-30 px-5 pt-5 prose md:prose-xl lg:prose-2xl max-w-none' }}@endif" x-cloak>
+        <div x-show="section == 'preview'" wire:target="updateContentPreview" class="@if(isset($style['preview'])){{ $style['preview'] }}@else{{ 'h-full bg-white min-h-[70vh] relative z-30 px-5 pt-5 prose prose-blue max-w-none' }}@endif" x-cloak>
             {!! $contentPreview !!}
         </div>
         {{-- End: MarkdownX Preview Section --}}
 
         {{-- MarkdownX Help Section --}}
-        <div x-show="section == 'help'" class="@if(isset($style['help'])){{ $style['help'] }}@else{{ 'h-full bg-white min-h-screen px-5 pt-10 relative z-30 prose bg-white dark:bg-dark-900 md:prose-xl lg:prose-lg max-w-none' }}@endif" x-cloak>
+        <div x-show="section == 'help'" class="@if(isset($style['help'])){{ $style['help'] }}@else{{ 'h-full bg-white min-h-screen px-5 pt-10 relative z-30 prose dark:bg-dark-900 md:prose-xl lg:prose-lg max-w-none' }}@endif" x-cloak>
 
             <h2>Markdown Basics</h2>
             <p>Below you will find some common used markdown syntax. For a deeper dive in Markdown check out this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet" target="_blank">Cheat Sheet</a></p>

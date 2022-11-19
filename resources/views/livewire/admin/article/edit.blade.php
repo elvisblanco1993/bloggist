@@ -18,7 +18,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="py-12">
             <div class="">
-                <input type="text" wire:model="title" class="border-0 rounded-lg w-full text-xl font-bold" placeholder="{{ __("Title...") }}">
+                <input type="text" wire:model="title" class="bg-transparent border-0 w-full text-2xl text-gray-800 font-bold outline-none border-transparent focus:border-transparent focus:ring-0" placeholder="{{ __("Title") }}">
                 <x-jet-input-error for="title"/>
             </div>
             <div class="mt-6">
