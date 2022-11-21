@@ -14,7 +14,7 @@
                         @csrf
                         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative w-full max-w-lg transform px-4 transition-all opacity-100 scale-100">
-                            <div class="overflow-hidden rounded-full bg-white shadow-md">
+                            <div class="overflow-hidden rounded-md bg-white shadow-md">
                                 <div class="relative">
                                     <input wire:keydown.enter="search" wire:model="term"
                                         class="block w-full appearance-none bg-transparent border-0 py-4 pl-4 pr-12 text-base text-slate-900 placeholder:text-slate-600 focus:outline-none sm:text-sm sm:leading-6"

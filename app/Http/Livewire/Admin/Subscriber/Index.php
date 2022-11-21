@@ -16,7 +16,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.admin.subscriber.index', [
-            'subscribers' => Subscriber::where('email', '%like%', $this->q)->orderBy('subscribed_at')->paginate($this->subsPerPage)
+            'subscribers' => Subscriber::orderBy('subscribed_at')->paginate($this->subsPerPage)
         ]);
     }
 }

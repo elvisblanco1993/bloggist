@@ -14,7 +14,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased text-gray-900 bg-white">
+    <body class="font-sans antialiased text-black bg-white">
         @include('website.partials.nav')
         <main class="min-h-screen">
             {{ $slot }}

@@ -8,11 +8,15 @@
 
         <div class="flex items-center space-x-4">
             @livewire('admin.article.options', ['article' => $article])
-            <select wire:model="status" class="border-0 rounded-lg">
+            <select wire:model="status" @class([
+                'border-0 rounded-lg text-sm py-1.5',
+                'bg-green-100 text-green-800' => $status == 'published',
+                'bg-yellow-100 text-yellow-800' => $status == 'draft',
+            ])>
                 <option value="draft">Draft</option>
                 <option value="published">Published</option>
             </select>
-            <button wire:click="save" type="submit" class="px-6 py-3 border-none rounded-full text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("Save Changes") }}</button>
+            <button wire:click="save" type="submit" class="px-4 py-2 border-none rounded-md text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("Save Changes") }}</button>
         </div>
     </nav>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

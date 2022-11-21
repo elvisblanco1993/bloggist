@@ -9,7 +9,7 @@
             </a>
 
             <div class="flex items-center space-x-3">
-                <button type="submit" class="px-6 py-3 border-none rounded-full text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("Save Changes") }}</button>
+                <button type="submit" class="px-4 py-2 border-none rounded-md text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("Save Changes") }}</button>
             </div>
         </nav>
 

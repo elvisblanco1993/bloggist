@@ -39,7 +39,6 @@
                                 <span class="px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100">{{ $category->articles_count }}</span>
                             </td>
                             <td class="px-6 py-4 flex items-center justify-end space-x-4">
-                                @livewire('admin.category.edit', ['category' => $category], key($category->id . '-edit'))
                                 @livewire('admin.category.delete', ['category' => $category], key($category->id . '-delete'))
                             </td>
                         </tr>

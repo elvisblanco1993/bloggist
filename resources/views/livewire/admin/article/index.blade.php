@@ -1,7 +1,7 @@
 <div>
     <div class="flex items-center justify-between">
         <h1 class="text-4xl font-extrabold">{{ __("Articles") }}</h1>
-        <a href="{{ route('admin.articles.create') }}" class="px-6 py-3 border-none rounded-full text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("New Article") }}</a>
+        <a href="{{ route('admin.articles.create') }}" class="px-4 py-2 border-none rounded-md text-white text-xs uppercase tracking-wider font-medium bg-black hover:bg-gray-800 transition-all">{{ __("New Article") }}</a>
     </div>
 
     <div class="py-10">

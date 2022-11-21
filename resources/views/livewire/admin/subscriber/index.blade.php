@@ -36,10 +36,9 @@
                                 {{ ($subscriber->subscribed_at && !$subscriber->unsubscribed_at) ? __('Subscribed') : __('Unsubscribed') }}
                             </td>
                             <td class="py-4 px-6">
-                                <span class="px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100">{{ $subscriber->subscribed_at }}</span>
+                                <span class="px-2 py-0.5 rounded text-xs tracking-wider text-slate-600 bg-slate-100">{{ Carbon\Carbon::parse($subscriber->subscribed_at)->format('M d, Y @ H:i a') }}</span>
                             </td>
                             <td class="px-6 py-4 flex items-center justify-end space-x-4">
-                                @livewire('admin.subscriber.edit', ['subscriber' => $subscriber], key($subscriber->id . '-edit'))
                                 @livewire('admin.subscriber.delete', ['subscriber' => $subscriber], key($subscriber->id . '-delete'))
                             </td>
                         </tr>

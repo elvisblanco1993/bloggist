@@ -10,10 +10,11 @@ class Subscriber extends Model
     use HasFactory;
 
     protected $casts = [
-        'confirmed_at' => 'timestamp'
+        'subscribed_at' => 'datetime'
     ];
 
     protected $fillable = [
-        'email'
+        'email',
+        'subscribed_at'
     ];
 }
