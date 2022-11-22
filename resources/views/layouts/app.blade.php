@@ -20,9 +20,9 @@
         <x-jet-banner />
 
         <div class="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-12 gap-8 py-12">
+            <div class="grid grid-cols-12 gap-8">
                 @include('layouts.nav')
-                <main class="col-span-12 md:col-span-9 lg:col-span-10">
+                <main class="col-span-12 md:col-span-9 lg:col-span-10 md:py-12">
                     {{ $slot }}
                 </main>
             </div>
