@@ -8,15 +8,15 @@
             <form wire:submit.prevent="save">
                 @csrf
                 <label for="email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">{{__("Subscribe")}}</label>
-                <div class="relative">
+                <div class="flex">
                     <input type="email"
                         wire:model="email"
                         id="email"
-                        class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-teal-200 focus:border-teal-300"
+                        class="block w-full p-3 text-sm text-gray-900 border border-r-0 border-gray-300 rounded-l-md bg-gray-50 focus:ring-teal-200 focus:border-teal-300"
                         placeholder="your@email.com"
                         required
                     >
-                    <button type="submit" class="text-teal-800 absolute right-1 bottom-1 top-1 bg-teal-200 hover:bg-teal-300 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-full text-sm px-4 py-2 transition-all">{{ __("Subscribe") }}</button>
+                    <button type="submit" class="text-teal-800 bg-teal-200 hover:bg-teal-300 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-r-md text-sm px-4 py-2 transition-all">{{ __("Subscribe") }}</button>
                 </div>
             <x-jet-input-error for="email" />
             </form>
