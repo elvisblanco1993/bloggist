@@ -10,7 +10,9 @@
                 @endforelse
             </div>
         </div>
-        <img src="{{ asset($article->banner) }}" alt="{{ $article->title }}" class="mt-6 w-full aspect-video object-cover object-center rounded-lg">
+        @if ($article->banner)
+            <img src="{{ asset($article->banner) }}" alt="{{ $article->title }}" class="mt-6 w-full aspect-video object-cover object-center rounded-lg">
+        @endif
         <div class="mt-6 prose lg:prose-lg prose-amber prose-img:rounded-lg min-w-full article">
             {!! Str::markdown($article->body) !!}
         </div>
