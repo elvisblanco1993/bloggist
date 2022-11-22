@@ -1,5 +1,8 @@
 <aside class="hidden md:block md:col-span-3 lg:col-span-2">
-    <a href="{{ route('dashboard') }}" class="text-xl font-bold"><span class="py-3 px-1 bg-black text-white">la</span> bahia</a>
+    <a href="{{ route('dashboard') }}" class="text-xl font-bold">
+        {{-- <span class="py-3 px-1 bg-black text-white">la</span> bahia --}}
+        bloggist
+    </a>
     <div class="my-6 border-t"></div>
 
     <a href="{{ route('dashboard') }}" @class([
