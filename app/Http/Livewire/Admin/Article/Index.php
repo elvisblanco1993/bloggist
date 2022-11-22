@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Article;
 
+use App\Models\Article;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -14,8 +15,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.admin.article.index', [
-            'articles' => auth()->user()->articles()
-            ->with('categories')
+            'articles' => Article::with('categories')
             ->withTrashed()
             ->orderBy('updated_at', 'DESC')
             ->paginate($this->perPage)
