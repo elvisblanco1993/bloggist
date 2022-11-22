@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Livewire\Web\Article\Show as ArticleShow;
 use App\Http\Livewire\Web\Article\Search as ArticleSearch;

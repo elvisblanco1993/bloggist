@@ -1,12 +1,23 @@
 <x-mail::message>
-# Introduction
+# {{__("Your weekly digest is ready.")}}
 
-The body of your message.
+{{__("Here are our latest articles, hand picked for you.")}}
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+@forelse ($articles as $article)
+<div style="display: flex; align-items: center; margin-top: 2rem; margin-bottom: 2rem">
+<div style="width: 96px; height: 96px">
+<a href="{{ route('article', ['article' => $article->slug]) }}">
+<img src="{{ asset($article->banner) }}" alt="" style="object-fit: cover; width: 96px; height: 96px">
+</a>
+</div>
+<div style="margin-left: 1.5rem; width: auto;">
+<a href="{{ route('article', ['article' => $article->slug]) }}" style="font-size: 1.125rem; font-weight: 800;">{{ $article->title }}</a>
+<p style="appearance: none; font-size: 1rem; font-weight: 500; color:#5f5f5f">{{ Carbon\Carbon::parse($article->published_at)->format('M, d Y') }}</p>
+</div>
+</div>
+@empty
+@endforelse
 
-Thanks,<br>
+{{__("Read on")}}!<br>
 {{ config('app.name') }}
 </x-mail::message>
