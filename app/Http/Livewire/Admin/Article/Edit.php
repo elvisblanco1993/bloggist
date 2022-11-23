@@ -39,7 +39,6 @@ class Edit extends Component
                 'slug' => str($this->title)->slug(),
                 'body' => $this->body,
                 'time_to_read' => (round(str_word_count($this->body) / 200) == 0) ? 1 : round(str_word_count($this->body) / 200),
-                'user_id' => auth()->user()->id,
                 'published_at' => ($this->status == 'draft') ? null : now(),
             ]);
             session()->flash('flash.banner', 'Article successfully saved!');

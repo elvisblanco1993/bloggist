@@ -21,6 +21,7 @@
 {{-- Footer --}}
 <x-slot:footer>
 <x-mail::footer>
+<p>You received this email because you subscribed to {{config('app.name')}}'s newsletter. If you wish to stop receiving these emails, you can <a href="">unsubscribe here</a>.</p>
 © {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
 </x-mail::footer>
 </x-slot:footer>
