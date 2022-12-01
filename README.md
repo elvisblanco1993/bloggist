@@ -1,4 +1,4 @@
-# Welcome to the installation guide for Bloggist.
+# Welcome to the **Bloggist** installation guide.
 
 Please read along to set up your own **Bloggist** instance.
 
