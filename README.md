@@ -1,4 +1,4 @@
-# Welcome to the installation guide for Bloggist: The light blogging platform.
+# Welcome to the installation guide for Bloggist.
 
 Please read along to set up your own **Bloggist** instance.
 
